@@ -21,8 +21,8 @@ from pathlib import Path
 
 from decouple import config
 
-#import dj_database_url
-
+ 
+import dj_database_url
 import stripe 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -108,30 +108,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'aiml_event.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+ 
 
 DATABASES = {
-     'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-         'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-         'PASSWORD': config('DB_PASSWORD'),
-         'HOST': config('DB_HOST'),
-         'PORT': config('DB_PORT'),
-
-
-
-     }
- }
-
-
-#DATABASES = {
-#    'default': dj_database_url.config(
- #       default='postgresql://aiml_user:kVRliD56R1XcVl3RiEd0368MO6MCuZKW@dpg-d3e6fcbipnbc73bhmi3g-a/aiml_db_kyln'
- #   )
-#}
+    'default': dj_database_url.config(
+        default='postgresql://aiml_user:kVRliD56R1XcVl3RiEd0368MO6MCuZKW@dpg-d3e6fcbipnbc73bhmi3g-a:5432/aiml_db_kyln'
+    )
+}
 
  
 
