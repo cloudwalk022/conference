@@ -37,9 +37,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 #ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ["www.aiml-paris.com", "aiml-paris.com"]
- 
-ALLOWED_HOSTS = os.getenv("www.aiml-paris.com", "aiml-paris.com").split(",")
+
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "aiml-paris.com,www.aiml-paris.com,conference-7wyd.onrender.com").split(",")
 
 
 AUTH_USER_MODEL = 'aiml_app.User'
