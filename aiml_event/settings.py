@@ -37,9 +37,9 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 #ALLOWED_HOSTS = ['*']
-#ALLOWED_HOSTS = ["your-service.onrender.com", "localhost"]
+ALLOWED_HOSTS = ["www.aiml-paris.com", "aiml-paris.com"]
  
-ALLOWED_HOSTS = os.getenv("https://conference-7wyd.onrender.com", "localhost").split(",")
+ALLOWED_HOSTS = os.getenv("www.aiml-paris.com", "aiml-paris.com").split(",")
 
 
 AUTH_USER_MODEL = 'aiml_app.User'
