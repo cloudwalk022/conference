@@ -6,7 +6,7 @@ services:
     region: oregon  # pick the closest region to you
     branch: main    # or your branch name
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn myproject.wsgi:application
+    startCommand: gunicorn aiml_event.wsgi:application
     envVars:
       - key: DEBUG
         value: "False"
