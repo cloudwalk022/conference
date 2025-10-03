@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-django-app
+    name: aiml_app
     env: python
     plan: starter
     region: oregon  # pick the closest region to you
@@ -16,4 +16,4 @@ services:
         value: "postgres://username:password@host:port/dbname"
 databases:
   - name: aiml_db
-    plan: free
+
